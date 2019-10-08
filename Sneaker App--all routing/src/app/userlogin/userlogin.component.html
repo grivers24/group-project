@@ -1,0 +1,24 @@
+<div class="container">
+    <div class='row'>
+        <div class="col-xs-12">
+            <form (ngSubmit)="onLoginSubmit()" #u="ngForm">
+                <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+                    <div class="form-group"></div>
+                    <h4>Login As User</h4>
+                    <label for="username" >Username </label>
+                    <input type="text" id="username" #n class="form-control" ngModel name="username" required/>
+                
+                <div class="form-group">
+                    <label for="lastname">Password</label>
+                    <input type="password" id="password" class="form-control" ngModel name="password" required/>
+                </div>
+
+                <button [disabled]="u.valid===false" class="btn btn-primary" type="submit">Login</button>
+            </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
