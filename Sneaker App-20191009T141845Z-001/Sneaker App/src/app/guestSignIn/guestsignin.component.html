@@ -1,0 +1,30 @@
+<div class="container">
+    <div class='row'>
+      <div class="col-xs-12">
+            <form (ngSubmit)="onSubmit()" #g="ngForm">
+                <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+                    <div class="form-group"></div>
+                    <h4>Login As Guest</h4>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" #n class="form-control" ngModel name="firstname" required/>
+
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" ngModel name="email" required />
+                </div>
+
+                <button [disabled]="g.valid===false" class="btn btn-primary" type="submit">Login As Guest</button>
+            </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class='row'>
+        
+    </div>
+</div>

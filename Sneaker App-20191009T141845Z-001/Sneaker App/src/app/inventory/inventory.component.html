@@ -1,0 +1,20 @@
+<div >
+    <h1>Sneaker Inventory</h1>
+    <div>
+       
+        <button class="btn btn-primary" (click)="onGetSneakers()">Get Sneakers</button>
+        
+        <p>{{action.onGetSneakers}}</p> 
+      
+        <br>
+        <ul class="list-group" *ngFor="let sneaker of sneakers; let i = index">
+            <li id="id" class="list-group-item">{{sneaker.name}} <br> Type: {{sneaker.type}}<br> Price:{{sneaker.price | currency}} <br>In-Stock:{{sneaker.quantity }}</li>
+            <img [src]="sneaker.pictureUrl">
+            <button class="btn btn-primary" (click)="onAdd()">Add to Cart</button>
+        </ul>
+    </div>
+  
+<button type="button" (click)="viewCart()">View Cart</button>
+</div>
+
+
