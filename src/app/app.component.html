@@ -1,0 +1,10 @@
+<div class="container">
+  
+    <div id="sidebar" *ngIf="usersService.hidden === false">
+      <a routerLink="/" >{{logout}} </a>
+    </div>
+    <div id="content">
+  <router-outlet></router-outlet>
+  </div>
+</div>
+

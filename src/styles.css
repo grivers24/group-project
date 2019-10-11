@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    align-self: auto;
+    text-align: justify;
+    text-transform: capitalize;
+    max-width: auto;
+    font-weight: bold;
+    color: #c72323;
+    /* background-image: url("https://amp.businessinsider.com/images/5ce6bb149252e334657c3922-1136-852.jpg"); */
+    font-weight: bold;
+}

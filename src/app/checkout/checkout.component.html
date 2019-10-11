@@ -1,0 +1,45 @@
+<body>
+  <h1>Checkout</h1>
+  <section style="display:inline-flex"><a routerLink='../cart'>
+      <h2> Back to Cart</h2>
+    </a> <a routerLink='../inventory'>
+      <h2> Back to Browsing </h2>
+    </a></section>
+  <br>
+  <div>
+    <h3>Subtotal: </h3>
+    <p>{{getSum() | currency}}</p>
+    <h3>Tax: </h3>
+    <p>{{getTax() | currency}}</p>
+    <h3>Total: </h3>
+    <p>{{getTotal() | currency}}</p>
+
+    <button class="btn btn-primary" (click)="submit()">Final Check Out</button>
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <form #f="ngForm">
+          <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+            <div>
+              <label for="nameOnCard">Name On Card</label>
+              <br />
+              <input type="text" id="nameOnCard" ngModel name="nameOnCard" required />
+            </div>
+            <div>
+              <label for="cardNumber">Card Number</label>
+              <br />
+              <input type="text" id="cardNumber" ngModel name="cardNumber" required />
+            </div>
+            <div>
+              <label for="zipCode">Billing Zip Code</label>
+              <br />
+              <input type="text" id="zipCode" ngModel name="zipCode" required />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
